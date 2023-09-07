@@ -9,7 +9,7 @@ import java.nio.file.Path;
 public class CreatingFile {
     public static void creatingFile(String text, String name) {
         boolean indicatorFile = false;   //  Files.exists name.txt
-        String str = "";
+        String str;
         if (Files.exists(Path.of(name + ".txt"))) {
             str = readFile(name);
             if (!str.contains(text)) {
@@ -42,11 +42,11 @@ public class CreatingFile {
         String nameF = name + ".txt", s;
         try (FileWriter writer = new FileWriter(nameF, indicator)) {
             writer.write(text + "\n");
-            /****************************
-            При возникновении проблемы с чтением-записью в файл,
-            исключение должно быть корректно обработано, пользователь должен увидеть
-            стектрейс ошибки.
-            ****************************/
+//            /****************************
+//            При возникновении проблемы с чтением-записью в файл,
+//            исключение должно быть корректно обработано, пользователь должен увидеть
+//            стектрейс ошибки.
+//            ****************************/
 //            throw new IOException("test IO exception   dummy   ...");
         } catch (IOException e) {
             s = String.format("Ошибка записи файла [%s],\n %s", nameF, e);

@@ -9,28 +9,25 @@ public class MessageHandler {
     static int count6 = 6;
     static final String fioMatch = "[а-яА-Яa-zA-Z]+";
     static final String dateMatch = "dd.MM.yyyy";  // dummy
-    static final String phoneMatch = "[0-9]+";  // dummy
-    static final String sexMatch = "[fFmM]";  // dummy
+//    static final String phoneMatch = "[0-9]+";  // dummy
+//    static final String sexMatch = "[fFmM]";  // dummy
 
     // https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html
     // https://javascopes.com/java-count-chars-4daa4b2e/
 
-
-
-
-    public static boolean checkDataStr(String s){ //  check five " " in string  userData.length == 6
-//   https://translated.turbopages.org/proxy_u/en-ru.ru.56e75114-64f99a5b-f23fc36f-74722d776562/https/stackoverflow.com/questions/5098429/java-count-number-of-symbols-in-string
-        long countZ = s.chars().filter(ch -> ch == ' ').count();
-        System.out.printf("checkDataStr(%s) : %s \n", s, countZ);
-
-        if (countZ  == count6 - 1)  return true;
-        else return false;
-    }
+//    public static boolean checkDataStr(String s){ //  check five " " in string  userData.length == 6
+////   https://translated.turbopages.org/proxy_u/en-ru.ru.56e75114-64f99a5b-f23fc36f-74722d776562/https/stackoverflow.com/questions/5098429/java-count-number-of-symbols-in-string
+//        long countZ = s.chars().filter(ch -> ch == ' ').count();
+//        System.out.printf("checkDataStr(%s) : %s \n", s, countZ);
+//
+//        if (countZ  == count6 - 1)  return true;
+//        else return false;
+//    }
 
     public static void arrayEnteredData(String[] userData) {
         int count = 0;
         StringBuilder errorS =  new StringBuilder();
-        String error = null;
+        String error ;
 
         if (userData.length != count6) {
             error = String.format("Вы ввели больше или меньше данных чем требуется [%s], введите строку заново", userData.length);
@@ -94,7 +91,7 @@ public class MessageHandler {
         } else{
             System.out.println(errorS);
             System.out.print(" Или введите exit для выхода :");
-            count = 0;
+
         }
     }
 }
