@@ -15,9 +15,9 @@ public class CreatingFile {
             if (!str.contains(text)) {
                 indicatorFile = true;
                 writerFile(name, text, indicatorFile);
-                System.out.printf("Данные успешно добавлены\n :");
+                System.out.print("Данные успешно добавлены\n :");
             } else {
-                System.out.printf("Данные существуют\n :");
+                System.out.print("Данные существуют\n :");
             }
         } else {
             writerFile(name, text, indicatorFile);
@@ -34,7 +34,7 @@ public class CreatingFile {
             }
             return str.toString();
         } catch (IOException e) {
-            throw new RuntimeException("Ошибка чтения файла \n" + e.getStackTrace());
+            throw new RuntimeException("Ошибка чтения файла \n" + e);
         }
     }
 
@@ -49,7 +49,7 @@ public class CreatingFile {
             ****************************/
 //            throw new IOException("test IO exception   dummy   ...");
         } catch (IOException e) {
-            s = String.format("Ошибка записи файла [%s],\n %s", nameF, e.getStackTrace());
+            s = String.format("Ошибка записи файла [%s],\n %s", nameF, e);
             throw new RuntimeException(s);
         }
     }
