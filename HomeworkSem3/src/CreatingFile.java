@@ -1,4 +1,3 @@
-// package HW.hw3;
 
 import java.io.FileReader;
 import java.io.FileWriter;

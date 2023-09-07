@@ -1,4 +1,3 @@
-// package HW.hw3;
 
 import java.util.Scanner;
 import java.lang.String;

@@ -1,4 +1,3 @@
-// package HW.hw3;
 
 import java.text.DateFormat;
 import java.text.ParseException;
